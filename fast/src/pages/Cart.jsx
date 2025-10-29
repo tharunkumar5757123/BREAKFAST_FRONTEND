@@ -2,7 +2,7 @@
 import React from "react";
 import { Card, Button, Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../context/cartContext"; // ✅ use context instead of utils
+import { useCart } from "../context/Cart"; // ✅ use context instead of utils
 import "../App.css";
 
 const Cart = () => {

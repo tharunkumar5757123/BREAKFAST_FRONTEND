@@ -4,7 +4,7 @@ import API from "../services/api";
 import { Card, Button, Row, Col, Form, Pagination } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
-import { useCart } from "../context/cartContext"; // ✅ use context instead of utils
+import { useCart } from "../context/Cart"; // ✅ use context instead of utils
 import "../App.css";
 
 const Menu = () => {
