@@ -3,12 +3,13 @@
   "builds": [
     {
       "src": "fast/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "fast/dist" }
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/fast/dist/index.html" }
+    {
+      "src": "/(.*)",
+      "dest": "/fast/dist/index.html"
+    }
   ]
 }
