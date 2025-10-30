@@ -8,6 +8,9 @@
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/fast/$1" }
+    {
+      "src": "/(.*)",
+      "dest": "/fast/dist/index.html"
+    }
   ]
 }
