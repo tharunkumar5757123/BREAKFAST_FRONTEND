@@ -729,3 +729,57 @@ html {
     width: 60%;
   }
 }
+
+
+
+
+/* 🌟 Make Register page responsive without changing JSX */
+
+.register-card {
+  transition: all 0.3s ease;
+}
+
+/* 📱 Mobile (small phones) */
+@media (max-width: 576px) {
+  .register-card {
+    max-width: 330px !important;
+    padding: 20px !important;
+  }
+
+  .register-card h3 {
+    font-size: 20px !important;
+  }
+
+  .register-card p {
+    font-size: 13px !important;
+  }
+
+  .register-card img {
+    width: 55px !important;
+  }
+
+  .register-card .form-control {
+    font-size: 14px !important;
+    padding: 8px 10px !important;
+  }
+
+  .register-card button {
+    font-size: 15px !important;
+    padding: 10px !important;
+  }
+}
+
+/* 📟 Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+  .register-card {
+    max-width: 380px !important;
+    padding: 25px !important;
+  }
+}
+
+/* 💻 Laptops */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .register-card {
+    max-width: 420px !important;
+  }
+}

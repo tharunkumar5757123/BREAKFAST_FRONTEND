@@ -13,26 +13,16 @@ const Register = () => {
     password: "",
     role: "user",
   });
+
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 900, once: true });
 
-    // 🧱 Apply full-screen layout & hide scroll temporarily
-    document.documentElement.style.height = "100%";
-    document.documentElement.style.margin = "0";
-    document.documentElement.style.padding = "0";
-    document.body.style.height = "100%";
-    document.body.style.margin = "0";
-    document.body.style.padding = "0";
     document.body.style.overflow = "hidden";
-
-    // ✅ Restore scroll when leaving the Register page
-    return () => {
-      document.body.style.overflow = "auto";
-    };
+    return () => (document.body.style.overflow = "auto");
   }, []);
 
   const handleChange = (e) => {
@@ -59,150 +49,130 @@ const Register = () => {
     <div
       style={{
         position: "fixed",
-        top: 0,
-        left: 0,
+        inset: 0,
         height: "100vh",
         width: "100vw",
-        margin: 0,
-        padding: 0,
         backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1920&q=80')",
+          "linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=1920&q=60')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        padding: "10px",
       }}
     >
       <Card
         data-aos="zoom-in"
-        className="shadow-lg border-0 p-4 rounded-4"
+        className="shadow-lg border-0 rounded-4"
         style={{
-          maxWidth: "420px",
+          maxWidth: "300px",              // smaller card
           width: "90%",
-          background: "rgba(255, 255, 255, 0.15)",
-          backdropFilter: "blur(14px)",
-          border: "1px solid rgba(255, 255, 255, 0.25)",
-          boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
+          padding: "14px",
+          background: "rgba(255, 255, 255, 0.10)",
+          backdropFilter: "blur(10px)",
+          border: "1px solid rgba(255, 255, 255, 0.15)",
           color: "#fff",
         }}
       >
         <Card.Body>
-          <div className="text-center mb-3">
+          <div className="text-center mb-2">
             <img
               src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
-              alt="Chef Hat"
-              width="70"
-              className="mb-3"
+              alt="Chef"
+              width="42"                   // smaller icon
+              className="mb-2"
             />
-            <h3 className="fw-bold text-white">Join Our Breakfast Club</h3>
-            <p className="text-light mb-4">
-              Start your day with a delicious morning! ☀️
+            <h6 className="fw-bold text-white">Create Your Account</h6>
+            <p className="text-light mb-2" style={{ fontSize: "12px" }}>
+              Start your foodie journey! 🍕✨
             </p>
           </div>
 
           {error && <Alert variant="danger">{error}</Alert>}
 
           <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-              <Form.Label className="text-white">Name</Form.Label>
+            <Form.Group className="mb-2">
+              <Form.Label className="text-white small">Name</Form.Label>
               <Form.Control
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="Enter your name"
+                placeholder="Enter name"
                 required
                 className="bg-transparent text-white border-light"
+                style={{ fontSize: "12px", padding: "5px 8px" }}
               />
             </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label className="text-white">Email</Form.Label>
+            <Form.Group className="mb-2">
+              <Form.Label className="text-white small">Email</Form.Label>
               <Form.Control
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="Enter your email"
+                placeholder="Email address"
                 required
                 className="bg-transparent text-white border-light"
+                style={{ fontSize: "12px", padding: "5px 8px" }}
               />
             </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label className="text-white">Mobile</Form.Label>
+            <Form.Group className="mb-2">
+              <Form.Label className="text-white small">Mobile</Form.Label>
               <Form.Control
                 type="text"
                 name="mobile"
                 value={form.mobile}
                 onChange={handleChange}
-                placeholder="Enter your mobile number"
+                placeholder="Mobile number"
                 required
                 className="bg-transparent text-white border-light"
+                style={{ fontSize: "12px", padding: "5px 8px" }}
               />
             </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label className="text-white">Password</Form.Label>
+            <Form.Group className="mb-2">
+              <Form.Label className="text-white small">Password</Form.Label>
               <Form.Control
                 type="password"
                 name="password"
                 value={form.password}
                 onChange={handleChange}
-                placeholder="Create a password"
+                placeholder="Create password"
                 required
                 className="bg-transparent text-white border-light"
+                style={{ fontSize: "12px", padding: "5px 8px" }}
               />
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-              {/* <Form.Label className="text-white">Role</Form.Label> */}
-              {/* <Form.Select
-                name="role"
-                value={form.role}
-                onChange={handleChange}
-                className="bg-transparent text-white border-light"
-              > */}
-                {/* <option value="user">User</option>
-                <option value="admin">Admin</option> */}
-              {/* </Form.Select> */}
             </Form.Group>
 
             <Button
               variant="warning"
               type="submit"
               disabled={loading}
-              className="w-100 fw-bold mt-2 py-2"
+              className="w-100 fw-bold mt-2"
               style={{
-                background: "linear-gradient(90deg, #ff9966, #ff5e62)",
+                background: "linear-gradient(90deg, #ff9800, #ff5722)",
                 border: "none",
-                color: "#fff",
-                transition: "all 0.3s ease",
+                fontSize: "13px",
+                padding: "6px 0",
               }}
-              onMouseEnter={(e) =>
-                (e.target.style.background =
-                  "linear-gradient(90deg, #ff5e62, #ff9966)")
-              }
-              onMouseLeave={(e) =>
-                (e.target.style.background =
-                  "linear-gradient(90deg, #ff9966, #ff5e62)")
-              }
             >
               {loading ? "Registering..." : "Register"}
             </Button>
           </Form>
 
-          <div className="text-center mt-3">
-            <small className="text-white-50">
+          <div className="text-center mt-2">
+            <small className="text-white-50" style={{ fontSize: "11px" }}>
               Already have an account?{" "}
               <Link
                 to="/login"
                 className="fw-semibold"
                 style={{ color: "#FFD700", textDecoration: "none" }}
               >
-                Login here
+                Login
               </Link>
             </small>
           </div>
