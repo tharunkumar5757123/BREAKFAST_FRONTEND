@@ -228,3 +228,504 @@ button.btn-outline-success:hover {
 
 
 
+
+
+
+
+
+
+/* ------------------------------------------
+   GLOBAL
+------------------------------------------ */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+img {
+  user-select: none;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* ------------------------------------------
+   HERO CAROUSEL
+------------------------------------------ */
+.hero-carousel .carousel-item {
+  height: 90vh;
+}
+
+.hero-carousel .carousel-caption {
+  bottom: 20%;
+}
+
+.hero-carousel h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+}
+
+.hero-carousel p {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+@media (max-width: 768px) {
+  .hero-carousel .carousel-item {
+    height: 70vh;
+  }
+}
+
+/* ------------------------------------------
+   SPECIAL PICKS
+------------------------------------------ */
+.special-card img {
+  border-radius: 20px;
+}
+
+.special-card h4 {
+  font-weight: 600;
+}
+
+.special-card button {
+  font-weight: 600;
+}
+
+/* ------------------------------------------
+   TRENDING CARDS
+------------------------------------------ */
+.trending-section .card {
+  border-radius: 18px;
+  transition: 0.25s;
+}
+
+.trending-section .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+.trending-section img {
+  border-radius: 16px 16px 0 0;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ------------------------------------------
+   CHEFS
+------------------------------------------ */
+.chef-card img {
+  height: 280px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+}
+
+.chef-card {
+  border-radius: 18px;
+  transition: 0.25s ease;
+  overflow: hidden;
+}
+
+.chef-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ------------------------------------------
+   TESTIMONIALS
+------------------------------------------ */
+.testimonial-card {
+  border-radius: 20px;
+  transition: 0.25s ease;
+  padding: 25px;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ------------------------------------------
+   LOCATION BAR
+------------------------------------------ */
+.sticky-top {
+  position: sticky !important;
+  top: 0;
+  z-index: 1050;
+}
+
+/* ------------------------------------------
+   SCROLL TO TOP BUTTON
+------------------------------------------ */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #ffc107;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  transition: 0.3s;
+  z-index: 1200;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-4px);
+  background: #ffb300;
+}
+
+/* ------------------------------------------
+   RESPONSIVE GRID FIXES
+------------------------------------------ */
+@media (max-width: 992px) {
+  .special-card img {
+    height: 230px !important;
+  }
+
+  .trending-section img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .special-card img {
+    height: auto;
+  }
+
+  .chef-card img {
+    height: 240px;
+  }
+
+  .hero-carousel .carousel-caption {
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-carousel h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-carousel p {
+    font-size: 1rem;
+  }
+}
+
+/* ------------------------------------------
+   SMOOTH SCROLLING FIX
+------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------------------------------------
+   MAKE EVERYTHING LOOK PREMIUM
+------------------------------------------ */
+.card-title {
+  font-weight: 600;
+}
+
+.card {
+  border: none !important;
+  border-radius: 18px !important;
+  overflow: hidden;
+}
+
+.rounded-4 {
+  border-radius: 18px !important;
+}
+
+
+
+
+
+/* -----------------------------------------
+   SWIGGY STYLE — MENU ITEM PAGE
+------------------------------------------*/
+
+/* HEADER IMAGE */
+.menu-header {
+  position: relative;
+}
+
+.menu-header-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 0 0 20px 20px;
+}
+
+/* OFFER BADGE */
+.offer-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #ff5722;
+  color: white;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* CONTENT AREA */
+.menu-content h2 {
+  font-size: 1.8rem;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rating-box {
+  background: #48c479;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.rating-votes {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.price-text {
+  color: #000;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* VEG / NON VEG ICON */
+.veg-dot,
+.nonveg-dot {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.veg-dot {
+  background: #0f8a0f;
+}
+
+.nonveg-dot {
+  background: #c0392b;
+}
+
+.food-tag {
+  background: #f5f5f5;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* STICKY ADD TO CART BAR */
+.add-cart-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.bar-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.add-cart-btn {
+  background: #fc8019;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 700;
+}
+
+.add-cart-btn:hover {
+  background: #e46e10;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 576px) {
+  .menu-header-img {
+    height: 220px;
+  }
+
+  .add-cart-btn {
+    width: 55%;
+    text-align: center;
+  }
+
+  .menu-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+/* ===================================================
+   SWIGGY STYLE — MENU ITEM DETAILS PAGE
+=================================================== */
+
+/* HEADER IMAGE */
+.menu-header {
+  position: relative;
+}
+
+.menu-header-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0 0 22px 22px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 5px 12px;
+  border-radius: 8px;
+}
+
+/* OFFER BADGE */
+.offer-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #ff5722;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* DETAILS CONTENT */
+.menu-details h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.price-text {
+  margin-top: 15px;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+/* RATING BOX */
+.rating-box {
+  background: #48c479;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* VEG/NON-VEG DOT */
+.veg-dot,
+.nonveg-dot {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.veg-dot {
+  background: #0f8a0f;
+}
+
+.nonveg-dot {
+  background: #c0392b;
+}
+
+.food-tag {
+  background: #f3f3f3;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ADD TO CART BOTTOM BAR */
+.add-cart-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.12);
+  z-index: 1000;
+}
+
+.bar-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.add-cart-btn {
+  background: #fc8019;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 700;
+}
+
+.add-cart-btn:hover {
+  background: #e26f15;
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+  .menu-header-img {
+    height: 230px;
+  }
+  .add-cart-btn {
+    width: 60%;
+  }
+}
