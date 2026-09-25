@@ -303,8 +303,3 @@ Full Stack Developer | MERN Stack
 * LinkedIn: https://www.linkedin.com/in/tharun-kumar-08716a281/
 * Portfolio: https://portfolio-app-blond-seven.vercel.app/
 
----
-
-## 📄 License
-
-This project is created for educational and portfolio purposes.
